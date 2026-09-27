@@ -1,6 +1,6 @@
-# Revisions tilt the odds toward five stocks
+# A provisional five-stock basket for Sep 28 to Nov 20, 2026
 
-The five US-listed stocks with the best risk-aware odds of beating the S&P 500 from Mon Sep 28 to Fri Nov 20, 2026 are **Nvidia (NVDA), Travelers (TRV), Amphenol (APH), JPMorgan Chase (JPM) and Tenet Healthcare (THC)**. We scored all 21 stress-tested names on one weighted scorecard. Applying the portfolio caps mechanically (no more than two AI-hardware names and no more than two names per sector) gives NVDA, TRV, **ANET**, JPM and THC. We replaced Arista with Amphenol by judgment, for reasons given below. A sensitivity test shows that TRV, JPM and THC are robust picks. The two AI slots are close to a toss-up among NVDA, ANET, APH and DELL, and NVDA drops out if its risk score is cut by one point or if it reports after Nov 20. The basket averages **3.63 out of 5**. Each pick has upward estimate revisions and a dated catalyst inside the window, and four of the five have a confirmed or strongly patterned earnings report in it. That matters because revisions and price momentum are the only signals with robust evidence at a two-month horizon. Post-earnings drift has largely disappeared in large caps. The edge is modest. A single stock beats the index over about two months only **45–48% of the time**, and an equal-weight five-stock basket still carries roughly ±5–7% of one-standard-deviation relative noise. So this is a probability tilt, not a forecast. The backdrop is fragile. The Fed hiked on Sep 16, the 10-year Treasury is near 5.2%, oil is around $92 on the Hormuz standoff, market breadth is at record-weak levels, and "long semis" is the most crowded trade. The basket's weakest scenario is a further yield spike, which would hit JPM and TRV together. The runners-up are **Arista (ANET), Dell (DELL), Micron (MU), Valero (VLO) and Cenovus (CVE)**. This is research, not investment advice.
+This report gives a **provisional five-stock basket**, drawn from a 21-name shortlist, for a paper test of whether estimate revisions and momentum can beat the S&P 500 from Mon Sep 28 to Fri Nov 20, 2026. It does not establish that these are the five best stocks. Scored with one rule for risk and one for catalysts across all 21 names (V3), the rule-based basket is **Travelers (TRV), JPMorgan Chase (JPM), Valero (VLO), Tenet Healthcare (THC) and Micron (MU)**, averaging 3.62 out of 5. No basket is privileged beyond that rule. Under random one-point changes to the scores, TRV and JPM are selected in 86% and 84% of runs and VLO in 72%. THC (52%) and MU (44%) are unstable, and the second AI slot rotates among MU, DELL, ANET, APH and NVDA. These are model-selection frequencies, not probabilities of beating the index. The earlier V2 basket, **NVDA, TRV, APH, JPM and THC**, relied on a risk score for Nvidia that V2 itself called hard to defend and on a judgment override of Arista. It is kept below as an alternative, together with the basket that follows if Nvidia confirms a Nov 17 report date. That matters because revisions and price momentum are the only signals with robust evidence at a two-month horizon. Post-earnings drift has largely disappeared in large caps. The edge is modest. We assume a single stock beats the index over about two months only **45–48% of the time** (an unvalidated estimate), and an equal-weight five-stock basket still carries roughly ±5–7% of one-standard-deviation relative noise. So this is a probability tilt, not a forecast. The backdrop is fragile. The Fed hiked on Sep 16, the 10-year Treasury is near 5.2%, oil is around $92 on the Hormuz standoff, market breadth is at record-weak levels, and "long semis" is the most crowded trade. The basket's weakest scenario is a further yield spike, which would hit JPM and TRV together. The runners-up are **Arista (ANET), Dell (DELL), Micron (MU), Valero (VLO) and Cenovus (CVE)**. This is research, not investment advice.
 
 **Read this before using any number in this report.** The finance pages that hold quotes, estimates and calendars (Yahoo Finance, CNBC, stockanalysis, MarketBeat, Zacks, GuruFocus, FactSet, SEC, BLS and BEA) were blocked by the research environment's network proxy. **Nearly every price, estimate, date and valuation figure here comes from search-engine result snippets, not full-page reads.** Snippets can mix dates or paraphrase wrongly, and the notes rejected several stale ones. **Re-verify every price, earnings date and estimate with a live quote tool before acting on this report**, especially the Sep 25 closing prices, the unconfirmed earnings dates (NVDA, APH, THC) and the "what proves it wrong" price levels. Figures that are derived rather than quoted are labelled as such.
 
@@ -90,7 +90,9 @@ The three stress-test notes scored their names separately. The tech and financia
 
 Treat the scores with caution. No verified short-interest figures, betas or 30/60/90-day revision histories were available for most names, so the revisions scores rest on guidance raises, target changes and Zacks ranks. **A 0.05 gap is half a notch on a 10%-weighted factor (one full notch there is worth 0.10), and sits well within the measurement noise.** The section on fragility below tests how much the ranking moves when these inputs change.
 
-## Theme caps turn the ranking into a five-stock basket
+## Theme caps turn the V2 ranking into a five-stock basket
+
+This section documents how the V2 basket was built. The V3 re-score in the next sections applies the same caps to consistently scored inputs and reaches a different basket.
 
 Three constraints shape the basket:
 
@@ -182,11 +184,73 @@ NVDA's selection therefore depends on the unresolved report date as well as the 
 | DELL | 28% |
 | MU | 18% |
 
-The exact report basket came up in only 6% of draws, and the most common basket (the mechanical one) in 7%. **Read the output as a robust core of TRV, JPM and THC plus two AI slots that are close to a toss-up among NVDA, ANET, APH and DELL.** The claim that these are *the* five best stocks is not supported. The data support a shortlist of hypotheses with low confidence in the exact order.
+The exact report basket came up in only 6% of draws, and the most common basket (the mechanical one) in 7%. These are **model-selection frequencies**, not probabilities of beating the index. They say that, within this scoring framework, TRV is selected far more reliably than THC, which drops out of 36% of runs. The tests only perturb scores inside the framework. They do not cover systematically wrong source data, other definitions of risk or momentum, scoring errors that move together across the AI names, other portfolio constraints or a wider universe. The claim that these are *the* five best stocks is not supported. The data support a shortlist of hypotheses with low confidence in the exact order.
 
 **What the scorecard does not answer.** Rising estimates are a documented predictive signal, but the scorecard never asks what the price already expects. TRV's quiet hurricane season is public. JPM's raised guidance is already in the higher consensus. NVDA's relative return depends on beating expectations embedded in a $5.4T valuation. The picks rest on the statistical tendency of revisions and momentum to persist, not on evidence that consensus is wrong.
 
-## Five picks: thesis, data, catalysts and kill signals
+## Consistent rules produce a different basket (V3)
+
+V2 left two inconsistencies. The risk score had no stated definition, so NVDA got a 4 while other semis got 1–2. The catalyst rule gave some aggregator-listed dates a 4 but FIX a 3. V3 applies one rule for each to all 21 names. Revisions, momentum, valuation and structural scores are unchanged. Script and output: `analysis/rescore_v3.py` and `analysis/rescore_v3_output.txt`.
+
+**Risk rule (5 = lowest risk).** Start from the relative-volatility class in the evidence section: low (about 20% a year relative to the index: large banks, P&C insurers, staples) = 4; typical (about 30%) = 3; high (45–60%: semis and AI hardware, names with beta near 2, cruise) = 2. Subtract 1 for an in-window binary event priced at ±10% or more (MU's Sep 30 print, CCL's Sep 29 print), and 1 for an extended chart flagged in the notes (THC at RSI 75; refiners more than 40% above their 150-day average).
+
+**Catalyst rule.** 4 = an in-window report or event announced by the company itself. 3 = an in-window date that comes only from aggregators or from the historical pattern. 2 = a date that could fall on either side of Nov 20. 1 = next report expected after Nov 20. V2's "good news already expected" adjustment is dropped, because it was applied unevenly.
+
+| Ticker | Risk V2→V3 | Catalyst V2→V3 | Score V2 | Score V3 |
+|---|---|---|---|---|
+| TRV | 4→4 | 4→4 | 3.75 | 3.75 |
+| JPM | 3→4 | 4→4 | 3.55 | 3.70 |
+| VLO | 1→2 | 3→4 | 3.30 | 3.65 |
+| MU | 1→1 | 4→4 | 3.50 | 3.50 |
+| THC | 2→2 | 3→3 | 3.50 | 3.50 |
+| DELL | 2→2 | 2→1 | 3.65 | 3.45 |
+| CVE | 2→3 | 3→3 | 3.20 | 3.35 |
+| ANET | 3→2 | 4→3 | 3.65 | 3.30 |
+| NVDA | 4→2 | 3→2 | 3.75 | 3.25 |
+| APH | 4→3 | 4→3 | 3.60 | 3.25 |
+| GEV | 3→3 | 4→4 | 3.10 | 3.10 |
+| P | 2→2 | 2→1 | 3.25 | 3.05 |
+| FIX | 3→3 | 3→3 | 3.05 | 3.05 |
+| GMED | 3→3 | 3→3 | 2.95 | 2.95 |
+| CRWD | 2→3 | 1→1 | 2.80 | 2.95 |
+| SNOW | 2→3 | 1→1 | 2.70 | 2.85 |
+| VRT | 1→2 | 4→3 | 2.85 | 2.80 |
+| KR | 4→4 | 4→4 | 2.70 | 2.70 |
+| STRL | 1→2 | 3→3 | 2.55 | 2.70 |
+| GS | 2→3 | 3→3 | 1.95 | 2.10 |
+| CCL | 1→1 | 4→4 | 1.90 | 1.90 |
+
+**Rule-based V3 basket: TRV, JPM, VLO, THC and MU**, average 3.62. The caps work as before (two Financials, at most two AI-capex names). DELL (3.45) is the next name in.
+
+**How stable it is.** Under the same random-perturbation test as V2, selection frequencies are TRV 86%, JPM 84%, VLO 72%, THC 52%, MU 44%, CVE 39%, ANET 28%, DELL 26%, APH 23% and NVDA 11%. The exact V3 basket appears in only 4.2% of runs. Moving one factor weight by 5 points changes the basket in 7 of 12 cases, usually by bringing in DELL.
+
+**Alternative baskets, none privileged:**
+
+| Basket | Names | When it applies |
+|---|---|---|
+| V3 rule-based | TRV, JPM, VLO, THC, MU | The scorecard as written, with consistent risk and catalyst rules |
+| V3 with NVDA date confirmed | TRV, JPM, VLO, THC, NVDA | If NVIDIA itself announces a report on or before Nov 20 (catalyst 4, score 3.65). Putting NVDA in the typical risk class alone (3.40) is not enough |
+| V2 judgment basket | NVDA, TRV, APH, JPM, THC | Relies on NVDA's undefined risk score of 4 and the APH-for-ANET override |
+
+**What V3 changes about the risk profile.** The V2 basket had no oil exposure. V3 adds VLO, which the notes identify as a Hormuz-deal loser: refiners are at a historic extreme and the notes' own provisional risk score was 1. The V3 rule does not penalize geopolitical event risk that isn't tied to a dated print, which is a limitation of the rule. V3 also adds MU, a ±10% binary report on day 3, which V2 had called contrary to a risk-aware brief. The rule already scores MU's risk at 1, and it still qualifies on revisions, catalyst and momentum.
+
+### VLO: record refining margins with a Hormuz clock
+
+- **Data.** $382.86 at the Sep 24 close, about 8.6% below its $419.04 high. Consensus EPS up 20.6% in 30 days with no cuts; Zacks #1. Q2 refining margin $23.62/bbl vs $12.35 a year earlier ([VLO 10-Q](https://www.sec.gov/Archives/edgar/data/0001035002/000162828026050937/vlo-20260630.htm)).
+- **Catalyst.** Q3 results on **Thu Oct 22**, announced by the company ([BusinessWire](https://www.businesswire.com/news/home/20260908867465/en/Valero-Energy-Corporation-to-Announce-Third-Quarter-2026-Earnings-Results-on-October-22-2026)).
+- **Bear case.** The 3-2-1 crack is about $64–70 against a ~$19 long-run median, and futures price it about 35% lower a year out. The last five times refiners stood this far above their 150-day average, six-month returns were negative every time, averaging −10.1% ([CNBC](https://www.cnbc.com/2026/08/17/refiner-stocks-are-on-a-nearly-unprecedented-run-history-says-it-could-end-soon.html)). Jefferies downgraded it to Hold on Sep 22 ([Investing.com](https://www.investing.com/news/analyst-ratings/jefferies-downgrades-valero-energy-stock-rating-on-refining-outlook-93CH-4909964)). On the June Hormuz deal it fell 7.6%.
+- **What proves it wrong.** Confirmed tanker transits through Hormuz under a deal that holds, or the prompt 3-2-1 crack falling below about $45.
+
+### MU: the biggest revisions, decided on day 3
+
+- **Data.** $1,082.28 on Sep 25, about 13.8% below its $1,255 high and up about 256–270% YTD. Consensus FQ4 EPS about $31, revenue about $50.6B.
+- **Catalyst.** FQ4 results on **Wed Sep 30 after the close**, announced by the company. Options imply about ±10% ([TipRanks](https://www.tipranks.com/news/why-micron-stock-options-signal-a-10-3-move-after-q4-results)).
+- **Bear case.** Management already flagged "a meaningful moderation in the rate of price increases" with gross margin at a record ~86%. An Evercore analyst says memory prices "appear to be peaking." A low P/E on peak earnings is a late-cycle signal, not valuation room.
+- **What proves it wrong.** A next-quarter guide showing flat pricing or falling gross margin, or the stock trading below about $950 in the days after the print.
+
+## Detailed write-ups for the V2 picks
+
+TRV, JPM and THC are in both baskets. NVDA and APH are V2-only picks and are kept for comparison.
 
 | Pick | Reference price | Price date | Price source | Distance from high | Next report (status) |
 |---|---|---|---|---|---|
@@ -200,7 +264,7 @@ All prices are snippet-sourced and must be re-verified. "n/f" means not found in
 
 ### NVDA: the laggard with the biggest revisions
 
-**Thesis.** NVDA combines the strongest absolute revisions in the universe with the least-extended chart among AI leaders. It is the least-crowded way to hold one AI-compute slot.
+**Thesis.** NVDA combines the strongest absolute revisions in the universe with the least-extended chart among AI leaders. Its weak price run means it is the least extended of the AI leaders. That is not evidence of low crowding: semis as a group are the most crowded trade.
 
 **Revisions.** Fiscal Q2 FY27 revenue was **$96.2B (+106%)** and EPS **$2.22 vs $2.09** expected. NVDA guided Q3 to **$108.0B ±2%**, about 4% above the Street, and supply commitments rose to $279B from $119B ([NVIDIA](https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027); [SEC 8-K](https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000073/q2fy27pr.htm)). It is Zacks Rank #1 ([Zacks via TradingView](https://www.tradingview.com/news/zacks:ecd994dc1094b:0-nvidia-and-travelzoo-have-been-highlighted-as-zacks-bull-and-bear-of-the-day/)).
 
@@ -223,7 +287,7 @@ All prices are snippet-sourced and must be re-verified. "n/f" means not found in
 - NVDA's Q4 guide comes in only in line, at about $118–120B (our estimate of an in-line figure).
 - NVDA closes below **about $205**, the level before the Aug 26 report. That is about 8.7% below the reference price.
 
-### TRV: the quiet hurricane season has not been priced into the chart
+### TRV: estimate revisions from a quiet hurricane season
 
 **Thesis.** TRV has the largest verified upward revision among the non-AI names. It reports on a confirmed date after a historically quiet hurricane season, and it adds a low-beta diversifier to the AI slots.
 
@@ -348,6 +412,8 @@ NVDA's report may add a third decision point in the final three trading days.
 
 ## Yields, not oil, are the basket's weak point
 
+This section was written for the V2 basket. For the V3 basket, oil matters directly: a Hormuz deal that holds is VLO's main risk, and MU's Sep 30 report is a single-day event risk. The yield-spike analysis for TRV, JPM and THC applies to both baskets.
+
 **A Hormuz deal that holds** would push oil and then yields down. Our notes' scenario map shows this would hurt energy and defense and lift airlines, rate-sensitive stocks and small caps. When the Iran offer surfaced, airlines rose 6–8% in a week ([24/7 Wall St](https://247wallst.com/investing/2026/09/23/iran-offered-to-reopen-the-strait-of-hormuz-these-stocks-could-be-the-biggest-winners/)). The basket has no oil exposure, so the direct effect is neutral to mildly positive. Lower yields would help TRV's book value and JPM's multiple, and the index would lose its energy leadership.
 
 The indirect risk is a momentum reversal. A bond rally that sparks a rush into laggards is the most plausible momentum-crash trigger in this window. THC, the basket's highest-momentum name at RSI 75, is the most exposed. "Short Treasuries" is the second most crowded trade in the Fund Manager Survey, which could amplify the reversal.
@@ -386,7 +452,9 @@ The indirect risk is a momentum reversal. A bond rally that sparks a rush into l
 
 ## Grading the picks on Nov 20 and Nov 23
 
-**Fixed window.** The official result uses the **Mon Sep 28 open** to the **Fri Nov 20 close** for every stock and for the benchmark. Do not substitute Sep 25 closes. That would change the experiment. If an open price is unavailable, use the Sep 28 close for the stock *and* the benchmark, and say so.
+**Official basket.** The V3 rule-based basket (TRV, JPM, VLO, THC, MU) is the pre-registered official basket, because it follows the stated rules. The V2 basket and the NVDA-confirmed variant are graded as supplementary results.
+
+**Fixed window.** The official result uses the **Mon Sep 28 open** to the **Fri Nov 20 close** for every stock and for the benchmark. Do not substitute Sep 25 closes. That would change the experiment. Use one entry convention for the whole basket: if the Sep 28 open is unavailable for any stock, switch every stock and the benchmark to the Sep 28 close. Report any mixed-convention result only as a separate note.
 
 **Benchmark.** Measure the S&P 500 total return with SPY (or the S&P 500 Total Return index) at exactly the same timestamps.
 
@@ -395,19 +463,19 @@ The indirect risk is a momentum reversal. A bond rally that sparks a rush into l
 Grade on four levels:
 
 1. **Per-pick excess return.** Each stock's total return minus the benchmark's.
-2. **Hit rate, with the right chance model.** Using the 45–48% base rate and assuming independent picks, the chance of at least four of five beating the index is **13–16%**, and of all five **2–2.5%**. The picks share exposures (yields, AI capex), so the true chance of a lucky cluster is higher. **Four or five winners would be encouraging, not proof of skill.** One eight-week window cannot establish an edge either way.
+2. **Hit rate, with the right chance model.** Using the assumed (unvalidated) 45–48% base rate and assuming independent picks, the chance of at least four of five beating the index is **13–16%**, and of all five **2–2.5%**. The picks share exposures (yields, AI capex), so the true chance of a lucky cluster is higher. **Four or five winners would be encouraging, not proof of skill.** One eight-week window cannot establish an edge either way.
 3. **Basket excess return.** The equal-weight basket against the benchmark. The ±5–7% band is a rough one-standard-deviation estimate, not a measured covariance or a significance threshold. A result outside it is a large outcome, not evidence of skill.
 4. **Process check.** For each pick, record whether its "what proves it wrong" signal fired and whether the stock then underperformed. A pick can beat the index for the wrong reason or lose despite a correct thesis.
 
 **Supplementary checks, reported separately from the official result:**
 
-- **The mechanical basket** (ANET in place of APH) and the **runners-up** (ANET, DELL, MU, VLO, CVE), graded the same way. One window cannot show whether the caps or the override helped, because selection and sector exposure change together. Treat these as descriptive only.
+- **The V2 basket** (NVDA, TRV, APH, JPM, THC), the **NVDA-confirmed variant** (NVDA in place of MU), and the next names in V3 order (DELL, CVE, ANET, APH), graded the same way. One window cannot show whether the caps or the override helped, because selection and sector exposure change together. Treat these as descriptive only.
 - **NVDA's report date.** Record the actual NVDA and THC report dates. If NVDA reports after Nov 20, note that its in-window catalyst did not happen. An optional Nov 30 re-mark of NVDA is a sensitivity check and never replaces the fixed-window result.
 
 Running the grading on Mon Nov 23 captures the Nov 20 closing data after options expiration. A grading check is scheduled for that date.
 
 ## Conclusion
 
-The main finding is that in this regime the scorecard's two strongest signals point in different directions. Momentum is concentrated in crowded AI hardware, while the cleanest revisions sit in a quiet-catastrophe insurer and a guided-up bank. Neither signal alone makes a risk-aware basket. The theme cap replaces a de facto AI-capex bet with a basket whose business drivers are split across rates (JPM, TRV), hyperscaler capex (NVDA, APH) and health policy (THC). The drivers differ, but the common macro exposure does not: a yield spike hits at least four of the five, and that exposure has not been quantified. The sensitivity test supports treating TRV, JPM and THC as the robust core. The two AI slots are low-confidence choices among four close names.
+Applied consistently, the scorecard picks TRV, JPM, VLO, THC and MU. Within this framework, TRV and JPM are the most reliable selections and VLO is fairly reliable; THC and the second AI slot are close calls. The picks rest on the statistical tendency of revisions and momentum to persist, not on evidence that consensus is wrong. The V3 basket trades V2's AI-capex exposure for oil (VLO) and a day-3 binary report (MU), and a yield spike still hits both Financials together.
 
-The uncomfortable implication is that the Financials leg makes the basket short the Fund Manager Survey's top tail risk, a yield spike. The Oct 13–16 cluster is therefore the first real test of the thesis, well before the AI names report. Given the snippet-only data, the most valuable next step is not more screening. It is a live-data pass that confirms prices, the NVDA and THC dates, and the implied moves, before anyone relies on these rankings.
+The most valuable next step is a live-data pass, not more scoring. It should confirm the Sep 28 opening prices, NVIDIA's and Tenet's report dates, and the recent estimate changes for the top ten names. NVIDIA's date alone decides whether it or MU holds the AI slot.

@@ -49,48 +49,49 @@ def tweak(tbl, t, f, v):
 def fmt(b):
     return ", ".join(sorted(b))
 
-base, sc = pick(S)
-print("Mechanical basket:", fmt(base), "| report basket:", fmt(REPORT))
-print("Differs from report by:", fmt(base - REPORT), "in /", fmt(REPORT - base), "out\n")
+if __name__ == "__main__":
+    base, sc = pick(S)
+    print("Mechanical basket:", fmt(base), "| report basket:", fmt(REPORT))
+    print("Differs from report by:", fmt(base - REPORT), "in /", fmt(REPORT - base), "out\n")
 
-print("Named scenarios")
-named = {
-    "NVDA risk 4->3": tweak(S, "NVDA", "risk", 3),
-    "NVDA risk 4->2": tweak(S, "NVDA", "risk", 2),
-    "NVDA reports Nov 25 (catalyst 3->2)": tweak(S, "NVDA", "cat", 2),
-    "NVDA Nov 25 and risk 2": tweak(tweak(S, "NVDA", "cat", 2), "NVDA", "risk", 2),
-    "ANET risk 3->4 (treat like APH)": tweak(S, "ANET", "risk", 4),
-}
-for k, tbl in named.items():
-    b, s = pick(tbl)
-    print(f"- {k}: NVDA={s['NVDA']:.2f}; basket = {fmt(b)}")
+    print("Named scenarios")
+    named = {
+        "NVDA risk 4->3": tweak(S, "NVDA", "risk", 3),
+        "NVDA risk 4->2": tweak(S, "NVDA", "risk", 2),
+        "NVDA reports Nov 25 (catalyst 3->2)": tweak(S, "NVDA", "cat", 2),
+        "NVDA Nov 25 and risk 2": tweak(tweak(S, "NVDA", "cat", 2), "NVDA", "risk", 2),
+        "ANET risk 3->4 (treat like APH)": tweak(S, "ANET", "risk", 4),
+    }
+    for k, tbl in named.items():
+        b, s = pick(tbl)
+        print(f"- {k}: NVDA={s['NVDA']:.2f}; basket = {fmt(b)}")
 
-print("\nWeight shifts (+/-5pp on one factor, others rescaled)")
-for f, d in itertools.product(F, (+.05, -.05)):
-    w = dict(W); w[f] += d
-    rest = sum(v for k, v in W.items() if k != f)
-    for k in W:
-        if k != f:
-            w[k] = W[k] * (1 - w[f]) / rest
-    b, _ = pick(S, w)
-    print(f"- {f} {d:+.2f}: {fmt(b)}{'' if b == base else '  <- changes'}")
+    print("\nWeight shifts (+/-5pp on one factor, others rescaled)")
+    for f, d in itertools.product(F, (+.05, -.05)):
+        w = dict(W); w[f] += d
+        rest = sum(v for k, v in W.items() if k != f)
+        for k in W:
+            if k != f:
+                w[k] = W[k] * (1 - w[f]) / rest
+        b, _ = pick(S, w)
+        print(f"- {f} {d:+.2f}: {fmt(b)}{'' if b == base else '  <- changes'}")
 
-print("\nOne-at-a-time +/-1 on every sub-score (21 names x 6 factors x 2)")
-n = ch = 0; who = Counter()
-for t, f, d in itertools.product(S, F, (1, -1)):
-    b, _ = pick(tweak(S, t, f, S[t][2 + F.index(f)] + d)); n += 1
-    if b != base:
-        ch += 1; who[f"{t}.{f}{d:+d}"] += 1
-print(f"- basket changes in {ch} of {n} single-point moves: {', '.join(who)}")
+    print("\nOne-at-a-time +/-1 on every sub-score (21 names x 6 factors x 2)")
+    n = ch = 0; who = Counter()
+    for t, f, d in itertools.product(S, F, (1, -1)):
+        b, _ = pick(tweak(S, t, f, S[t][2 + F.index(f)] + d)); n += 1
+        if b != base:
+            ch += 1; who[f"{t}.{f}{d:+d}"] += 1
+    print(f"- basket changes in {ch} of {n} single-point moves: {', '.join(who)}")
 
-print("\nMonte Carlo: each sub-score moves -1/0/+1 with prob 25/50/25%, 20,000 draws")
-random.seed(0); N = 20000; freq = Counter(); exact = Counter()
-for _ in range(N):
-    tbl = {t: r[:2] + tuple(max(0, min(5, v + random.choice((-1, 0, 0, 1)))) for v in r[2:]) for t, r in S.items()}
-    b, _ = pick(tbl); freq.update(b); exact[b] += 1
-print("| Ticker | Selected in % of draws |\n|---|---|")
-for t, c in freq.most_common(12):
-    print(f"| {t} | {100*c/N:.0f}% |")
-print(f"\nMechanical basket exact: {100*exact[base]/N:.1f}% of draws; report basket exact: {100*exact[REPORT]/N:.1f}%")
-b1, c1 = exact.most_common(1)[0]
-print(f"Most common basket: {fmt(b1)} ({100*c1/N:.1f}%)")
+    print("\nMonte Carlo: each sub-score moves -1/0/+1 with prob 25/50/25%, 20,000 draws")
+    random.seed(0); N = 20000; freq = Counter(); exact = Counter()
+    for _ in range(N):
+        tbl = {t: r[:2] + tuple(max(0, min(5, v + random.choice((-1, 0, 0, 1)))) for v in r[2:]) for t, r in S.items()}
+        b, _ = pick(tbl); freq.update(b); exact[b] += 1
+    print("| Ticker | Selected in % of draws |\n|---|---|")
+    for t, c in freq.most_common(12):
+        print(f"| {t} | {100*c/N:.0f}% |")
+    print(f"\nMechanical basket exact: {100*exact[base]/N:.1f}% of draws; report basket exact: {100*exact[REPORT]/N:.1f}%")
+    b1, c1 = exact.most_common(1)[0]
+    print(f"Most common basket: {fmt(b1)} ({100*c1/N:.1f}%)")
