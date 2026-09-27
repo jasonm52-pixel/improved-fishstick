@@ -1,0 +1,45 @@
+Mechanical basket: ANET, JPM, NVDA, THC, TRV | report basket: APH, JPM, NVDA, THC, TRV
+Differs from report by: ANET in / APH out
+
+Named scenarios
+- NVDA risk 4->3: NVDA=3.60; basket = ANET, DELL, JPM, THC, TRV
+- NVDA risk 4->2: NVDA=3.45; basket = ANET, DELL, JPM, THC, TRV
+- NVDA reports Nov 25 (catalyst 3->2): NVDA=3.55; basket = ANET, DELL, JPM, THC, TRV
+- NVDA Nov 25 and risk 2: NVDA=3.25; basket = ANET, DELL, JPM, THC, TRV
+- ANET risk 3->4 (treat like APH): NVDA=3.75; basket = ANET, JPM, NVDA, THC, TRV
+
+Weight shifts (+/-5pp on one factor, others rescaled)
+- rev +0.05: DELL, JPM, NVDA, THC, TRV  <- changes
+- rev -0.05: ANET, JPM, NVDA, THC, TRV
+- cat +0.05: ANET, JPM, NVDA, THC, TRV
+- cat -0.05: DELL, JPM, NVDA, THC, TRV  <- changes
+- mom +0.05: ANET, DELL, JPM, THC, TRV  <- changes
+- mom -0.05: APH, JPM, NVDA, THC, TRV  <- changes
+- risk +0.05: APH, JPM, NVDA, THC, TRV  <- changes
+- risk -0.05: DELL, JPM, NVDA, THC, TRV  <- changes
+- val +0.05: DELL, JPM, NVDA, THC, TRV  <- changes
+- val -0.05: ANET, JPM, NVDA, THC, TRV
+- struct +0.05: ANET, JPM, NVDA, THC, TRV
+- struct -0.05: ANET, JPM, NVDA, THC, TRV
+
+One-at-a-time +/-1 on every sub-score (21 names x 6 factors x 2)
+- basket changes in 24 of 252 single-point moves: NVDA.rev-1, NVDA.cat-1, NVDA.mom-1, NVDA.risk-1, DELL.cat+1, DELL.risk+1, DELL.val+1, DELL.struct+1, ANET.rev-1, ANET.cat-1, ANET.mom-1, ANET.risk-1, ANET.val-1, ANET.struct-1, APH.rev+1, APH.cat+1, APH.mom+1, APH.risk+1, APH.val+1, APH.struct+1, MU.cat+1, MU.mom+1, THC.rev-1, THC.cat-1
+
+Monte Carlo: each sub-score moves -1/0/+1 with prob 25/50/25%, 20,000 draws
+| Ticker | Selected in % of draws |
+|---|---|
+| TRV | 91% |
+| JPM | 77% |
+| THC | 64% |
+| NVDA | 52% |
+| ANET | 49% |
+| APH | 43% |
+| VLO | 30% |
+| CVE | 29% |
+| DELL | 28% |
+| MU | 18% |
+| GMED | 9% |
+| P | 4% |
+
+Mechanical basket exact: 7.0% of draws; report basket exact: 6.0%
+Most common basket: ANET, JPM, NVDA, THC, TRV (7.0%)
