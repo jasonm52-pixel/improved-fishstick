@@ -6,6 +6,12 @@
       "sourceType": "github",
       "skillPath": "SKILL.md",
       "computedHash": "79a629e89368db7003d49b5e121b384079807b94e9c83c0914028d786af1776e"
+    },
+    "the-council": {
+      "source": "DantesPeak85/the-council",
+      "sourceType": "github",
+      "skillPath": "skills/the-council/SKILL.md",
+      "computedHash": "e8c6f545b6eb87af54340922114536cc2fecb600b0b8f4a16d560dcdc76ed095"
     }
   }
 }
